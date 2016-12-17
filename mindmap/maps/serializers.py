@@ -11,11 +11,6 @@ class MapSerializer(serializers.HyperlinkedModelSerializer):
         fields = ('id','data','author')
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
-    """
-        #maps/models.py
-        class Map(models.Model):
-        author = models.ForeignKey('auth.User', related_name='maps')
-    """
     maps = serializers.HyperlinkedRelatedField(many=True,view_name='map-detail',read_only=True)
 
     class Meta:
