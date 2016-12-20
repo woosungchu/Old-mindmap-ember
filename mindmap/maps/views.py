@@ -9,8 +9,6 @@ from rest_framework.reverse import reverse
 from maps.models import Map
 from maps.serializers import MapSerializer, UserSerializer
 
-from django.views.generic.base import TemplateView
-
 """
 @api_view(['GET'])
 def api_root(request, format=None):
@@ -25,7 +23,7 @@ class IndexView(APIView):
     template_name = "index.html"
 
     def get(self, request):
-        return Response({'test': 'test'})
+        return Response()
 
 class MapsViewSet(viewsets.ModelViewSet):
     queryset = Map.objects.all()
