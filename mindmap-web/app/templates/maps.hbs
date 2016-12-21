@@ -1,0 +1,22 @@
+<div class="jumbo">
+  <div class="right tomster"></div>
+  <h2>Welcome to LearningTool</h2>
+  <p>
+    All tool for learner!
+    <br>pick your tool and enjoy it!
+  </p>
+</div>
+
+{{#each model as |map|}}
+  <article class="listing">
+    <h3>{{map.title}}</h3>
+    <div class="detail id">
+      <span>ID:</span> {{map.id}}
+    </div>
+    <div class="detail data">
+      <span>data:</span> {{map.data}}
+    </div>
+  </article>
+{{/each}}
+
+{{outlet}}
