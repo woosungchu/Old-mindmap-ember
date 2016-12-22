@@ -3,16 +3,17 @@ from maps.models import Map
 from django.contrib.auth.models import User
 
 class MapSerializer(serializers.HyperlinkedModelSerializer):
-    author = serializers.HyperlinkedRelatedField(view_name='user-detail',read_only=True)
-    #author = serializers.ReadOnlyField(source='author.username')
+    url = serializers.HyperlinkedIdentityField(view_name="api:map-detail")
+    author = serializers.HyperlinkedRelatedField(view_name='api:user-detail',read_only=True)
 
     class Meta:
         model = Map
-        fields = ('id','data','author')
+        fields = ('url','id','map','author')
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
-    maps = serializers.HyperlinkedRelatedField(many=True,view_name='map-detail',read_only=True)
+    url = serializers.HyperlinkedIdentityField(view_name="api:user-detail")
+    maps = serializers.HyperlinkedRelatedField(many=True,view_name='api:map-detail',read_only=True)
 
     class Meta:
         model = User
-        fields = ('id','username','maps')
+        fields = ('url','id','username','maps')

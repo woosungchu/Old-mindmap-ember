@@ -25,7 +25,7 @@ class IndexView(APIView):
     def get(self, request):
         return Response()
 
-class MapsViewSet(viewsets.ModelViewSet):
+class MapViewSet(viewsets.ModelViewSet):
     queryset = Map.objects.all()
     serializer_class = MapSerializer
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
