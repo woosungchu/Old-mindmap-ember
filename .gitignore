@@ -8,6 +8,7 @@ __pycache__
 
 #virtualenv
 mindmap-venv/
+env/
 
 #dist
 static/
