@@ -24,8 +24,8 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
-    //Default value
-    //ENV.APP.API_HOST = 'http://localhost:8000';
+    ENV.APP.API_HOST = 'http://localhost:4200';
+    ENV.APP.API_NAMESPACE = 'api';
 
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
