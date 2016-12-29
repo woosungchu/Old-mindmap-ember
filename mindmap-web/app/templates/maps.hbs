@@ -1,22 +1,29 @@
-<div class="jumbo">
-  <div class="right tomster"></div>
-  <h2>Welcome to LearningTool</h2>
-  <p>
-    All tool for learner!
-    <br>pick your tool and enjoy it!
-  </p>
+<div class="row">
+
+  <div class="sidebar-toggle col-sm-3">
+    <a href="#" style="float:right"><span class="glyphicon glyphicon-minus"></span></a>
+    <ul>
+      <li>mindmap-name</li>
+      <li>
+        <ul>
+          <li>jstree</li>
+        </ul>
+      </li>
+    </ul>
+  </div><!--end sidebar-->
+
+  <div class="col-sm-9">
+    {{#each model as |map|}}
+    <article class="listing">
+      <h3>{{map.title}}</h3>
+      <div class="detail id">
+        <span>ID:</span> {{map.id}}
+      </div>
+      <div class="detail map">
+        <span>map:</span> {{map.map}}
+      </div>
+    </article>
+    {{/each}}
+  </div>
+
 </div>
-
-{{#each model as |map|}}
-  <article class="listing">
-    <h3>{{map.title}}</h3>
-    <div class="detail id">
-      <span>ID:</span> {{map.id}}
-    </div>
-    <div class="detail map">
-      <span>map:</span> {{map.map}}
-    </div>
-  </article>
-{{/each}}
-
-{{outlet}}
