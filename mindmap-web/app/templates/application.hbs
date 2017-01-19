@@ -1,35 +1,42 @@
-{{#bs-navbar}}
-  <div class="navbar-header">
-    {{#bs-navbar-toggle}}
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    {{/bs-navbar-toggle}}
-    {{#link-to 'index' class="navbar-brand"}}MindMap{{/link-to}}
-  </div><!-- end navbar-header-->
+<nav id="mindmap-navbar" class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" aria-expanded="false"
+      data-toggle="collapse" data-target="#navbar-collapser" >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      {{#link-to 'index' class="navbar-brand"}}MindMap{{/link-to}}
+    </div><!-- end navbar-header-->
 
-  {{#bs-navbar-content}}
-    {{#bs-form class="navbar-form navbar-left" role="search" action="submit"}}
-      {{#bs-form-group}}
-        {{bs-input type="text" class="form-control" placeholder="Search"}}
-     {{/bs-form-group}}
-     {{bs-button class="hidden-xs" type="default" buttonType="submit" icon="glyphicon glyphicon-search"}}
-    {{/bs-form}}
-    {{#bs-navbar-nav class="navbar-right"}}
-        {{#bs-nav-item}}{{#link-to "index"}}Repositories{{/link-to}}{{/bs-nav-item}}
-        {{#bs-nav-item}}{{#link-to "index"}}Stars{{/link-to}}{{/bs-nav-item}}
-        {{#bs-dropdown tagName="li"}}
-          {{#bs-dropdown-toggle}}Others <span class="caret"></span>{{/bs-dropdown-toggle}}
-          {{#bs-dropdown-menu}}
-            {{#bs-nav-item}}{{#link-to "index"}}Test{{/link-to}}{{/bs-nav-item}}
-            {{#bs-nav-item}}{{#link-to "index"}}Test{{/link-to}}{{/bs-nav-item}}
-          {{/bs-dropdown-menu}}
-        {{/bs-dropdown}}<!--end dropdown -->
-    {{/bs-navbar-nav}}
-
-  {{/bs-navbar-content}}
-{{/bs-navbar}}<!--end navbar-->
+    <div id="navbar-collapser" class="collapse navbar-collapse navbar-right">
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default hidden-xs">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </button>
+      </form>
+      <ul class="nav navbar-nav">
+          <li>{{#link-to "index"}}Repositories{{/link-to}}</li>
+          <!--
+          <li>{{#link-to "index"}}Stars{{/link-to}}</li>
+          <li class="dropdown">
+           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+           <ul class="dropdown-menu">
+             <li>{{#link-to "index"}}Test{{/link-to}}</li>
+             <li role="separator" class="divider"></li>
+             <li>{{#link-to "index"}}Test{{/link-to}}</li>
+           </ul>
+         </li>
+         -->
+      </ul>
+    </div>
+  </div>
+</nav>
 
 <div class="body">
   {{outlet}}

@@ -1,29 +1,9 @@
-<div class="row">
+<svg id="mindmap-container" class="container-fluid">
+<g id="tool" transform="translate(0,0)">
+  <rect class="tool-button" y="5" width="25" height="40"></rect>
+  <rect class="tool-button" y="50" width="25" height="40"></rect>
+  <rect class="tool-button" y="95" width="25" height="40"></rect>
+  <rect class="tool-button" y="140" width="25" height="40"></rect>
+</g>
 
-  <div class="sidebar-toggle col-sm-3">
-    <a href="#" style="float:right"><span class="glyphicon glyphicon-minus"></span></a>
-    <ul>
-      <li>mindmap-name</li>
-      <li>
-        <ul>
-          <li>jstree</li>
-        </ul>
-      </li>
-    </ul>
-  </div><!--end sidebar-->
-
-  <div class="col-sm-9">
-    {{#each model as |map|}}
-    <article class="listing">
-      <h3>{{map.title}}</h3>
-      <div class="detail id">
-        <span>ID:</span> {{map.id}}
-      </div>
-      <div class="detail map">
-        <span>map:</span> {{map.map}}
-      </div>
-    </article>
-    {{/each}}
-  </div>
-
-</div>
+</svg>
