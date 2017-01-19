@@ -1,5 +1,14 @@
 #NCLB - MindMap
 
+##Build
+
+    cd mindmap-web
+    ember build -e production
+    cd mindmap
+    python manage.py collectstatic
+    python manage.py runserver
+
+
 ##Technology
 Backend
 - [Django](https://www.djangoproject.com/)
