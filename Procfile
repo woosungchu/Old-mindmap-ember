@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath mindmap mindmap.wsgi
+web: gunicorn --pythonpath mindmap app.wsgi
