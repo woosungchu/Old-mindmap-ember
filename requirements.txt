@@ -1,3 +1,7 @@
 Django==1.10.3
 djangorestframework==3.5.3
 httpie
+
+#deploy
+gunicorn
+whitenoise
