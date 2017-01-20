@@ -1,7 +1,8 @@
-Django==1.10.3
+Django==1.10.4
 djangorestframework==3.5.3
 httpie
 
 #deploy
-gunicorn
-whitenoise
+gunicorn==19.6.0
+#psycopg2==2.6.2
+whitenoise==3.2

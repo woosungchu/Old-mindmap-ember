@@ -1,1 +1,1 @@
-web: gunicorn mindmap.wsgi --log-file -
+web: gunicorn mindmap/mindmap.wsgi --log-file -
