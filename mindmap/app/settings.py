@@ -13,7 +13,10 @@ SECRET_KEY = '60%47d1-7g&jvimxaab=8vr9thf=und9_2+62d2(0zypf^e+#j'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+                'alt-mindmap.herokuapp.com',
+                'localhost',
+                ]
 
 #EMBER_OUTPUT = os.path.join(BASE_DIR, 'static')
 
