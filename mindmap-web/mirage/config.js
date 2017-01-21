@@ -7,22 +7,22 @@ export default function() {
         {
           id: 1,
           title : 'Bad',
-          map : 'test1'
+          node : 'test1'
         },
         {
           id: 2,
           title : 'Romance',
-          map : 'test2'
+          node : 'test2'
         },
         {
           id: 3,
           title : 'Poker',
-          map : 'test3'
+          node : 'test3'
         },
         {
           id: 4,
           title : 'Face',
-          map : 'test4'
+          node : 'test4'
         }
       ];
   });
