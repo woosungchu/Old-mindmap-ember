@@ -10,6 +10,11 @@ Router.map(function() {
   this.route('maps',function(){
     this.route('new');
   });
+
+  this.route('users', {path: '/api-auth'}, function() {
+    this.route('login');
+    this.route('logout');
+  });
 });
 
 export default Router;

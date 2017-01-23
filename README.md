@@ -14,7 +14,7 @@ Backend
 - [Django](https://www.djangoproject.com/)
 - [Django-Rest-Framework](http://www.django-rest-framework.org/)
 - Mysql or PostgreSql
-- Heroku or AWS - <https://www.google.co.kr/search?q=deploy+django+ember>
+- [Heroku](https://www.heroku.com/)
 
 Frontend
 - [Ember](http://emberjs.com/)
@@ -22,5 +22,3 @@ Frontend
 - [Ember simple auth](https://github.com/simplabs/ember-simple-auth)
 - [Ember simplet auth token](https://github.com/jpadilla/ember-simple-auth-token)
 - [Ember-bootstrap](http://kaliber5.github.io/ember-bootstrap/)
-- [Ember-cli-jstree](https://github.com/ritesh83/ember-cli-jstree)
-- Ember-d3 - <https://www.google.co.kr/search?q=ember+d3>
