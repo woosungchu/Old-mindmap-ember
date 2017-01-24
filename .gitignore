@@ -12,3 +12,7 @@ env/
 
 #dist
 static/
+
+# dependencies
+/node_modules
+/bower_components
