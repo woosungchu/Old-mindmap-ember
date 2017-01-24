@@ -27,6 +27,12 @@ export default function() {
       ];
   });
 
-
+  this.post('/token-auth', function(){
+    return [
+      {
+        status : 'OK'
+      }
+    ];
+  });
 
 }

@@ -1,5 +1,5 @@
 <div id="login-box" class="text-center">
-  <form class="form-horizontal">
+  <form class="form-horizontal" {{action 'authenticate' on='submit'}}>
     <div class="form-group">
       <label for="email" class="col-sm-2 control-label">Email</label>
       <div class="col-sm-8">
@@ -29,6 +29,9 @@
       </div>
     </div>
   </form>
+  {{#if errorMessage}}
+    <p>{{errorMessage}}</p>
+  {{/if}}
 </div>
 
 

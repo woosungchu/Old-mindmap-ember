@@ -1,8 +1,6 @@
 import Ember from 'ember';
+//provides the authenticationSucceeded and invalidationSucceeded events
+import ApplicationRouteMixin from 'ember-simple-auth/mixins/application-route-mixin';
 
-export default Ember.Route.extend({
-  // beforeModel(){
-  //   this._super(...arguments);
-  //   window.location.replace("/api-auth/login");
-  // }
-});
+//To make a route in the application accessible only when the session is authenticated, mix the AuthenticatedRouteMixin into the respective route:
+export default Ember.Route.extend(ApplicationRouteMixin);
