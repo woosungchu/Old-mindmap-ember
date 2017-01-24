@@ -7,7 +7,7 @@
 */
 
 body {
-  background-color: rgba(39, 137, 216, .20);
+  background-color: rgba(39, 137, 216, .10);
 }
 
 #mindmap-navbar {
@@ -31,4 +31,16 @@ body {
   rx : 6;
   ry : 6;
   x : 97%;
+}
+
+
+/*login*/
+#login-box {
+  margin : 50px auto 0px;
+  padding : 30px 10px 10px;
+  background-color: rgba(39, 137, 216, .20);
+  max-width: 600px;
+  box-shadow: rgba(0, 0, 0, 0.74902) 0px 0px 45px -2px;
+  /*10px 10px 5px #888888;*/
+  border-radius: 10px;
 }
