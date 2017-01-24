@@ -8,7 +8,7 @@
     "test": "tests"
   },
   "scripts": {
-    "postinstall": "cd mindmap-web && ember build"
+    "postinstall": "cd mindmap-web && npm install && bower install"
   },
   "repository": "",
   "engines": {
