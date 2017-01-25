@@ -5,7 +5,7 @@ export default Ember.Controller.extend({
   actions : {
     authenticate(){
       let credentials = this.getProperties('email','password'),
-          authenticator = 'authenticator:token';
+          authenticator = 'authenticator:jwt';
 
       this.get('session').authenticate(authenticator, credentials).catch((reason) => {
                             this.set('errorMessage', reason.error || reason);
