@@ -15,6 +15,7 @@ Backend
 - [Django-Rest-Framework](http://www.django-rest-framework.org/)
 - Mysql or PostgreSql
 - Heroku or AWS - <https://www.google.co.kr/search?q=deploy+django+ember>
+- [dj-database-url](https://github.com/kennethreitz/dj-database-url)
 
 Frontend
 - [Ember](http://emberjs.com/)
