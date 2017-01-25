@@ -1,5 +1,13 @@
 export default function() {
 
+  this.post('/api-token-auth', function(){
+    return [
+      {
+        token : 'OK'
+      }
+    ];
+  });
+
   this.namespace = '/api';
 
   this.get('/maps',function(){
@@ -27,12 +35,6 @@ export default function() {
       ];
   });
 
-  this.post('/token-auth', function(){
-    return [
-      {
-        status : 'OK'
-      }
-    ];
-  });
+
 
 }

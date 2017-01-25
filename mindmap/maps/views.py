@@ -37,3 +37,18 @@ class MapViewSet(viewsets.ModelViewSet):
 class UserViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
+
+""" Code for test
+from rest_framework.views import APIView
+from rest_framework.authentication import TokenAuthentication
+from rest_framework.permissions import AllowAny
+
+class TestView(APIView):
+    authentication_classes = (TokenAuthentication, )
+    permission_classes = (AllowAny,)
+
+    def post(self, request, *args, **kwargs):
+        print(request.data);
+
+        return Response('test', status=status.HTTP_400_BAD_REQUEST)
+"""
