@@ -1,8 +1,9 @@
 Django==1.10.4
 djangorestframework==3.5.3
+dj-database-url==0.4.2
+psycopg2==2.6.2
 httpie
 
 #deploy
 gunicorn==19.6.0
-#psycopg2==2.6.2
 whitenoise==3.2
