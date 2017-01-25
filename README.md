@@ -13,9 +13,8 @@
 Backend
 - [Django](https://www.djangoproject.com/)
 - [Django-Rest-Framework](http://www.django-rest-framework.org/)
-- Mysql or PostgreSql
-- Heroku or AWS - <https://www.google.co.kr/search?q=deploy+django+ember>
 - [dj-database-url](https://github.com/kennethreitz/dj-database-url)
+
 
 Frontend
 - [Ember](http://emberjs.com/)
@@ -25,3 +24,7 @@ Frontend
 - [Ember-bootstrap](http://kaliber5.github.io/ember-bootstrap/)
 - [Ember-cli-jstree](https://github.com/ritesh83/ember-cli-jstree)
 - Ember-d3 - <https://www.google.co.kr/search?q=ember+d3>
+
+Others
+- [Heroku](https://www.heroku.com/)
+- [PostgreSql](https://data.heroku.com/)

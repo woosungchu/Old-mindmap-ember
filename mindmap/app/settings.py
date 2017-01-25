@@ -68,18 +68,9 @@ WSGI_APPLICATION = 'app.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
-""" for db.sqlite3
+TEST_DB_URL = 'postgres://tloksognvrpkop:7821764f34dbdad81aea3870847bbfe4545b6cf4576a7fea19a8b4420da9e1e1@ec2-54-225-122-119.compute-1.amazonaws.com:5432/d35asp9l8scmk9'
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-"""
-#PostgreSql
-DATABASES = {
-    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'
-                    ,'postgres://tloksognvrpkop:7821764f34dbdad81aea3870847bbfe4545b6cf4576a7fea19a8b4420da9e1e1@ec2-54-225-122-119.compute-1.amazonaws.com:5432/d35asp9l8scmk9'))
+    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL',TEST_DB_URL))
 }
 
 
