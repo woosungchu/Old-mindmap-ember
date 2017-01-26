@@ -4,13 +4,13 @@ export default Ember.Controller.extend({
   session : Ember.inject.service('session'),
   actions : {
     authenticate: function() {
-      var credentials = this.getProperties('identification', 'password'),
-        authenticator = 'authenticator:jwt';
+      let credentials = this.getProperties('identification', 'password'),
+          authenticator = 'authenticator:jwt';
 
       this.get('session').authenticate(authenticator, credentials)
                           .catch((reason) => {
-                              console.log(reason)
-                              this.set('errorMessage', reason.error || reason);
+                              let message = 'The username or password is incorret';
+                              this.set('errorMessage', message);
                           });
     }
   }
