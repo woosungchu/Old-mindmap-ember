@@ -3,7 +3,7 @@ export default function() {
   this.post('/api-token-auth', function(){
     return [
       {
-        token : 'OK'
+        "token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6Indvb3N1bmdjaHUiLCJleHAiOjE0ODU3NTA3NzQsImVtYWlsIjoid29vc3VuZ2NodUBnbWFpbC5jb20ifQ.eAT4_B3GCFS0fDTf0NIG6lermhVQRN82bOtBtJDZvPw"
       }
     ];
   });
