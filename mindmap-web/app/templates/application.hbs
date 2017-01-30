@@ -26,7 +26,7 @@
           <li>{{#link-to "index"}}Repositories{{/link-to}}</li>
           <!-- <li><a href="/api-auth/login">Login</a></li> -->
           {{#if session.isAuthenticated}}
-            <li><a {{action 'invalidateSession'}}>Logout</a></li>
+            <li><a href="#" {{action 'invalidateSession' preventDefault=false }}>Logout</a></li>
           {{else}}
             <li>{{#link-to "users.login"}}Login{{/link-to}}</li>
           {{/if}}
