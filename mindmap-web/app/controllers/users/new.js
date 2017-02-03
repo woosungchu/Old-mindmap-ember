@@ -11,12 +11,12 @@ export default Ember.Controller.extend({
           password : param.password
       });
 
-      user.save().then(function() {
+      user.save().then(()=> {
         // Success callback
         alert('User account is successfully created!');
-        this.transitionToRoute('users.login');
+        this.transitionToRoute('users.login'); // this works
 
-      }, function() {
+      }).catch(()=>{
         // Error callback
         alert('Request failed!');
       });

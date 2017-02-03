@@ -8,6 +8,8 @@ from rest_framework.views import APIView
 from rest_framework.reverse import reverse
 from maps.models import Map
 from maps.serializers import MapSerializer, UserSerializer
+from rest_framework.authentication import TokenAuthentication
+from rest_framework.permissions import AllowAny
 
 """
 @api_view(['GET'])
@@ -35,6 +37,8 @@ class MapViewSet(viewsets.ModelViewSet):
         serializer.save(author = self.request.user)
 
 class UserViewSet(viewsets.ModelViewSet):
+    authentication_classes = (TokenAuthentication, )
+    permission_classes = (AllowAny,)
     queryset = User.objects.all()
     serializer_class = UserSerializer
 

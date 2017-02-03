@@ -37,7 +37,7 @@ export default function() {
 
   this.post('/users',function(schema,request){
     return{
-      'user': schema.db.users.insert(JSON.parse(request.requestBody).user)
+      'user': {username:'good'}//schema.db.users.insert(JSON.parse(request.requestBody).user)
     };
   });
 
