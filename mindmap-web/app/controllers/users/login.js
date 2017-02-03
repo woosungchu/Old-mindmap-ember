@@ -8,6 +8,9 @@ export default Ember.Controller.extend({
           authenticator = 'authenticator:jwt';
 
       this.get('session').authenticate(authenticator, credentials)
+                          .then((response) => {
+                            this.transitionToRoute('index');
+                          })
                           .catch((reason) => {
                               let message = 'The username or password is incorret';
                               this.set('errorMessage', message);

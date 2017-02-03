@@ -3,14 +3,22 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   actions : {
     postUser(param){
-      let username = param.get('username'),
-          email = param.get('email'),
-          password = param.get('password');
+      let user = null;
 
-      this.data('store').createRecord('user',{
-          username : username,
-          email : email,
-          password : password
+      user = this.get('store').createRecord('user',{
+          username : param.username,
+          email : param.email,
+          password : param.password
+      });
+
+      user.save().then(function() {
+        // Success callback
+        alert('User account is successfully created!');
+        this.transitionToRoute('users.login');
+
+      }, function() {
+        // Error callback
+        alert('Request failed!');
       });
     }
   }

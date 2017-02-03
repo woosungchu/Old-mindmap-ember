@@ -11,7 +11,7 @@ Router.map(function() {
     this.route('new');
   });
 
-  this.route('users', {path: '/api-auth'}, function() {
+  this.route('users', function() {
     this.route('login');
     this.route('logout');
     this.route('new');
