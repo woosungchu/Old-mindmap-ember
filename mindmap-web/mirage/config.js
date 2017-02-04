@@ -1,11 +1,22 @@
+import Mirage from 'ember-cli-mirage';
+
 export default function() {
 
-  this.post('/api-token-auth', function(){
-    return [
-      {
-        "token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6Indvb3N1bmdjaHUiLCJleHAiOjE0ODU3NTA3NzQsImVtYWlsIjoid29vc3VuZ2NodUBnbWFpbC5jb20ifQ.eAT4_B3GCFS0fDTf0NIG6lermhVQRN82bOtBtJDZvPw"
-      }
-    ];
+  //https://gist.github.com/code0100fun/f9b99b2a562702683602
+  this.post('/api-token-auth', function(db, request){
+    var params = JSON.parse(request.requestBody);
+    console.log(params);
+    if(params.username === "test" && params.password === "test") {
+      var body = {
+        "access_token":"PA$$WORD",
+        "token_type":"bearer",
+        "token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJvcmlnX2lhdCI6MTQ4NjIwMTQ1NiwiZXhwIjoxNDg2MjAxNzU2LCJlbWFpbCI6InRlc3RAZW1haWwuY29tIiwidXNlcl9pZCI6NDN9.iM3d3KmOD66wDj8hsJXRu_gFC2CxSRXWv63EISmVDU8"
+      };
+      return new Mirage.Response(201, {}, body);
+    }else{
+      var body = { errors: 'Email or password is invalid' };
+      return new Mirage.Response(401, {}, body);
+    }
   });
 
   this.namespace = '/api';
@@ -37,7 +48,7 @@ export default function() {
 
   this.post('/users',function(schema,request){
     return{
-      'user': {username:'good'}//schema.db.users.insert(JSON.parse(request.requestBody).user)
+      'user': {"username":"test","email":"test@email.com","password":"test"}//schema.db.users.insert(JSON.parse(request.requestBody).user)
     };
   });
 

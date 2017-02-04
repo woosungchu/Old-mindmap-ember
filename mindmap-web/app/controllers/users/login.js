@@ -9,6 +9,7 @@ export default Ember.Controller.extend({
 
       this.get('session').authenticate(authenticator, credentials)
                           .then((response) => {
+                            //console.log(response)
                             this.transitionToRoute('index');
                           })
                           .catch((reason) => {
