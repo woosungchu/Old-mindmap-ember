@@ -30,7 +30,8 @@ class IndexView(APIView):
 class MapViewSet(viewsets.ModelViewSet):
     queryset = Map.objects.all()
     serializer_class = MapSerializer
-    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    authentication_classes = (TokenAuthentication, )
+    permission_classes = (AllowAny,)
 
     #add User
     def perform_create(self, serializer):

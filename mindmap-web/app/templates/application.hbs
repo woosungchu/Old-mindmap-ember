@@ -23,12 +23,13 @@
       </form>
        -->
       <ul class="nav navbar-nav">
-          <li>{{#link-to "index"}}Repositories{{/link-to}}</li>
-          <!-- <li><a href="/api-auth/login">Login</a></li> -->
+        <li>{{#link-to "maps.list"}}Maps{{/link-to}}</li>
           {{#if session.isAuthenticated}}
+            <!-- <li>{{#link-to "users.list"}}User{{/link-to}}</li> -->
             <li><a href="#" {{action 'invalidateSession' preventDefault=false }}>Logout</a></li>
           {{else}}
-            <li>{{#link-to "users.login"}}Login / SignUp{{/link-to}}</li>
+            <li>{{#link-to "users.login"}}Login{{/link-to}}</li>
+            <li>{{#link-to "users.new"}}SignUp{{/link-to}}</li>
           {{/if}}
           <!--
           <li>{{#link-to "index"}}Stars{{/link-to}}</li>

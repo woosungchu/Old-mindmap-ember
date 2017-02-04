@@ -9,6 +9,7 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('maps',function(){
     this.route('new');
+    this.route('list');
   });
 
   this.route('users', function() {

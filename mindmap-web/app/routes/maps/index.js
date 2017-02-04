@@ -1,7 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model(){
-    return this.get('store').findAll('map');
+  beforeModel() {
+    this._super(...arguments);
+    this.replaceWith('maps.new');
   }
 });

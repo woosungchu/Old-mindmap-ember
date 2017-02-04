@@ -9,7 +9,7 @@ class MapSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Map
-        fields = ('id','author','title','node','descript','path')
+        fields = ('id','author','title')#,'node','descript','path
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     #url = serializers.HyperlinkedIdentityField(view_name="api:user-detail")

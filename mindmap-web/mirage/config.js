@@ -5,16 +5,16 @@ export default function() {
   //https://gist.github.com/code0100fun/f9b99b2a562702683602
   this.post('/api-token-auth', function(db, request){
     var params = JSON.parse(request.requestBody);
-    console.log(params);
+
     if(params.username === "test" && params.password === "test") {
-      var body = {
+      let body = {
         "access_token":"PA$$WORD",
         "token_type":"bearer",
         "token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJvcmlnX2lhdCI6MTQ4NjIwMTQ1NiwiZXhwIjoxNDg2MjAxNzU2LCJlbWFpbCI6InRlc3RAZW1haWwuY29tIiwidXNlcl9pZCI6NDN9.iM3d3KmOD66wDj8hsJXRu_gFC2CxSRXWv63EISmVDU8"
       };
       return new Mirage.Response(201, {}, body);
     }else{
-      var body = { errors: 'Email or password is invalid' };
+      let body = { errors: 'Email or password is invalid' };
       return new Mirage.Response(401, {}, body);
     }
   });
@@ -46,9 +46,15 @@ export default function() {
       ];
   });
 
-  this.post('/users',function(schema,request){
+  this.post('/maps',function(/*schema,request*/){
     return{
-      'user': {"username":"test","email":"test@email.com","password":"test"}//schema.db.users.insert(JSON.parse(request.requestBody).user)
+      'map': {"title":"untitled","author":{"username":"test","email":"test@email.com","password":"test"}}//schema.db.users.insert(JSON.parse(request.requestBody).user)
+    };
+  });
+
+  this.post('/users',function(/*schema,request*/){
+    return{
+      'user': {/*"id":1,*/"username":"test","email":"test@email.com","password":"test"}//schema.db.users.insert(JSON.parse(request.requestBody).user)
     };
   });
 
