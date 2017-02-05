@@ -4,8 +4,8 @@ from django.contrib.auth.models import User
 
 class MapSerializer(serializers.HyperlinkedModelSerializer):
     #url = serializers.HyperlinkedIdentityField(view_name="api:map-detail")
-    #author = serializers.HyperlinkedRelatedField(view_name='api:user-detail',read_only=True)
-    author = serializers.ReadOnlyField(source='author.username')
+    author = serializers.HyperlinkedRelatedField(view_name='api:user-detail',read_only=True)
+    # author = serializers.ReadOnlyField(source='author.username')
 
     class Meta:
         model = Map
