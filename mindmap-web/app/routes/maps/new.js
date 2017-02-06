@@ -24,8 +24,8 @@ export default Ember.Route.extend({
     if (this.get('session.isAuthenticated')) {
       let map = this.get('store').createRecord('map');
 
-      map.save().then((map)=>{
-          console.log(map);
+      map.save().then((response)=>{
+          console.log(response);
           return map;
       }).catch((/*error*/)=>{
         return this._super(...arguments);
