@@ -33,7 +33,7 @@ class MapViewSet(viewsets.ModelViewSet):
 
     #add User
     def perform_create(self, serializer):
-        print(self.request.user)
+        #print(self.request.user)
         serializer.save(author = self.request.user)
 
 class UserViewSet(viewsets.ModelViewSet):

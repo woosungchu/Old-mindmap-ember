@@ -65,7 +65,7 @@ module.exports = function(environment) {
     identificationField: 'username',
     passwordField: 'password',
     tokenPropertyName: 'token',
-    authorizationPrefix: 'Token ',
+    authorizationPrefix: 'JWT ',//'Token ',
     authorizationHeaderName: 'Authorization',
   };
 
