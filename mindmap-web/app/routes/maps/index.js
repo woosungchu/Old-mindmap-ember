@@ -1,8 +1,16 @@
 import Ember from 'ember';
 
+const { service } = Ember.inject;
+
 export default Ember.Route.extend({
+  session : service('session'),
   beforeModel() {
     this._super(...arguments);
-    this.replaceWith('maps.new');
+    if (this.get('session.isAuthenticated')) {
+      this.replaceWith('maps.new');
+    }else{
+      this.replaceWith('users.login');
+    }
   }
+
 });

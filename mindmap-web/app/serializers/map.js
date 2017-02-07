@@ -1,7 +1,8 @@
 import DRFSerializer from './drf';
+import DS from 'ember-data';
 
-export default DRFSerializer.extend(DS.EmbeddedRecordsMixin,{
+export default DRFSerializer.extend(DS.EmbeddedRecordsMixin, {
   attrs: {
-    author: { embedded: 'always' }
+    author: { serialize: 'records', deserialize: 'records' }
   }
 });
