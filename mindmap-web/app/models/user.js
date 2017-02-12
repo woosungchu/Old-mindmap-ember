@@ -4,7 +4,5 @@ export default DS.Model.extend({
   //created : DS.attr('date'),
   username : DS.attr('string'),
   password : DS.attr('string'),
-  email : DS.attr('string'),
-
-  maps : DS.hasMany('map')
+  email : DS.attr('string')
 });

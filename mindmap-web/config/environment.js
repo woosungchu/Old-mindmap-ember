@@ -26,6 +26,10 @@ module.exports = function(environment) {
   if (environment === 'development') {
     ENV.APP.API_HOST = 'http://localhost:4200';
     ENV.APP.API_NAMESPACE = 'api';
+    //mirage
+    ENV['ember-cli-mirage'] = {
+      enabled: true
+    };
 
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
@@ -41,6 +45,11 @@ module.exports = function(environment) {
     // keep test console output quieter
     ENV.APP.LOG_ACTIVE_GENERATION = false;
     ENV.APP.LOG_VIEW_LOOKUPS = false;
+    
+    //mirage
+    ENV['ember-cli-mirage'] = {
+      enabled: true
+    };
 
     ENV.APP.rootElement = '#ember-testing';
   }

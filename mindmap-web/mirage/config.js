@@ -22,40 +22,24 @@ export default function() {
   this.namespace = '/api';
 
   this.get('/maps',function(){
-    return [
-        {
-          id: 1,
-          title : 'Bad',
-          node : 'test1'
-        },
-        {
-          id: 2,
-          title : 'Romance',
-          node : 'test2'
-        },
-        {
-          id: 3,
-          title : 'Poker',
-          node : 'test3'
-        },
-        {
-          id: 4,
-          title : 'Face',
-          node : 'test4'
-        }
-      ];
-  });
-
-  this.post('/maps',function(/*schema,request*/){
-    return{
-      'map': {"title":"untitled","author":{"username":"test","email":"test@email.com","password":"test"}}//schema.db.users.insert(JSON.parse(request.requestBody).user)
+    return {
+      'map': schema.db.maps
     };
   });
 
-  this.post('/users',function(/*schema,request*/){
-    return{
-      'user': {/*"id":1,*/"username":"test","email":"test@email.com","password":"test"}//schema.db.users.insert(JSON.parse(request.requestBody).user)
-    };
+  this.post('/maps',function(schema,request){
+    var attrs = JSON.parse(request.requestBody)//.maps;
+    var map = schema.db.maps.insert(attrs);
+
+    return map;
+  });
+
+  this.post('/users',function(schema,request){
+    var attrs = JSON.parse(request.requestBody)//.maps;
+    var user = schema.db.maps.insert(attrs);
+
+    return user;
+    //schema.db.users.insert(JSON.parse(request.requestBody).user)
   });
 
 
