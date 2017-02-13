@@ -21,10 +21,8 @@ export default function() {
 
   this.namespace = '/api';
 
-  this.get('/maps',function(){
-    return {
-      'map': schema.db.maps
-    };
+  this.get('/maps',function(schema,request){
+    return schema.db.maps;
   });
 
   this.post('/maps',function(schema,request){

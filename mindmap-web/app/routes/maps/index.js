@@ -9,7 +9,7 @@ export default Ember.Route.extend({
     if (this.get('session.isAuthenticated')) {
       this.replaceWith('maps.new');
     }else{
-      this.replaceWith('users.login');
+      this.replaceWith('maps.list');
     }
   }
 
