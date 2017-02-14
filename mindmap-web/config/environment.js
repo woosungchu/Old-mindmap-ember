@@ -45,7 +45,7 @@ module.exports = function(environment) {
     // keep test console output quieter
     ENV.APP.LOG_ACTIVE_GENERATION = false;
     ENV.APP.LOG_VIEW_LOOKUPS = false;
-    
+
     //mirage
     ENV['ember-cli-mirage'] = {
       enabled: true
@@ -61,7 +61,7 @@ module.exports = function(environment) {
   }
 
   ENV['ember-simple-auth'] = {
-    authorizer: 'authorizer:token'
+    authorizer: 'authorizer:jwt'
   };
   ENV['ember-simple-auth-token'] = {
     refreshAccessTokens: true,
