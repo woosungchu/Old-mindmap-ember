@@ -25,15 +25,19 @@ export default function() {
     return schema.db.maps;
   });
 
+  this.get('/maps/:id',function(schema,request){
+    return schema.db.maps.find(request.params.id);
+  });
+
   this.post('/maps',function(schema,request){
-    var attrs = JSON.parse(request.requestBody)//.maps;
+    var attrs = JSON.parse(request.requestBody);//.maps;
     var map = schema.db.maps.insert(attrs);
 
     return map;
   });
 
   this.post('/users',function(schema,request){
-    var attrs = JSON.parse(request.requestBody)//.maps;
+    var attrs = JSON.parse(request.requestBody);//.maps;
     var user = schema.db.maps.insert(attrs);
 
     return user;

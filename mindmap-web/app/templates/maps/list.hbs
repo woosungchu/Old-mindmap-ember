@@ -1,7 +1,11 @@
 {{#link-to "maps.new" class="btn btn-primary" }}New Map{{/link-to}}
 <ul>
 {{#each model as |map|}}
-  <li>{{#link-to "maps.index" }}{{map.title}}{{/link-to}}</li>
+  <li>
+    <a {{action "getMap" map.id }}>
+      {{map.title}}
+    </a>
+  </li>
 {{/each}}
 </ul>
 

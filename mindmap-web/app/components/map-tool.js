@@ -10,10 +10,10 @@ export default Ember.Component.extend({
   x:'30%',y:'0',width:'40%',height:'45px',
 
   actions: {
-    test(evt){
+    test(/*evt*/){
       alert('test');
     },
-    save(evt){
+    save(/*evt*/){
       alert('Save');
       let postMindMap = this.get('postMindMap');
       postMindMap();
