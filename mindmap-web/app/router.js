@@ -7,9 +7,10 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('maps', function(){
-    this.route('new', { path: '/new/:id' });
-    this.route('list');
+  this.route('maps', function(){});
+  this.route('map', function() {
+    this.route('new');
+    this.route('edit', { path: '/:id' });
   });
 
   this.route('users', function() {
@@ -17,6 +18,7 @@ Router.map(function() {
     this.route('logout');
     this.route('new');
   });
+
 });
 
 export default Router;

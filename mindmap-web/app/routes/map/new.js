@@ -9,9 +9,9 @@ export default Ember.Route.extend({
     if (!this.get('session.isAuthenticated')) {
       this.replaceWith('users.login');
     }
-  },
-  model(param){
-    console.log(param.id);
-    //alert(param && param.id);
-  }
+  }//,
+  // model(param){
+  //   console.log(param.id);
+  //   //alert(param && param.id);
+  // }
 });
