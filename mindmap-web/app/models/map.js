@@ -8,9 +8,9 @@ export default DS.Model.extend({
   //author : DS.attr('string'),
   title : DS.attr('string',{
     defaultValue : 'Untitled'
-  })//,
+  }),
   //data
-  // node : DS.hasMany('node'),
+  node : DS.hasMany('node')//,
   // descript : DS.hasMany('descript'),
   // path : DS.hasMany('path')
 

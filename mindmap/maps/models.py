@@ -13,3 +13,10 @@ class Map(models.Model):
 
     def __str__(self):
         return '%s - %s' % (self.title,self.created)
+
+class Node(models.Model):
+    map = models.ForeignKey(Map,related_name="nodes")
+    name = models.TextField(default='Node')
+
+    def __str__(self):
+        return self.node;
